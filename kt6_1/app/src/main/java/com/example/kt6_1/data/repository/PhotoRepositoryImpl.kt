@@ -1,6 +1,7 @@
 package com.example.kt6_1.data.repository
 
 import com.example.kt6_1.data.api.PicsumApi
+import com.example.kt6_1.data.model.PhotoDto
 import com.example.kt6_1.domain.model.Photo
 import com.example.kt6_1.domain.repository.PhotoRepository
 
