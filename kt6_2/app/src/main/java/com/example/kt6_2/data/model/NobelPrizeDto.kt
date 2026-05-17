@@ -1,6 +1,5 @@
 package com.example.kt6_2.data.model
 
-import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -50,7 +49,7 @@ data class LaureateDto(
     val portion: String? = null,
     val sortOrder: String,
     val motivation: MotivationDto? = null,
-    val links: LinksDto? = null,
+    val links: List<LinksDto>? = null,
     val birth: BirthDto? = null,
     val death: DeathDto? = null,
     val wikipedia: WikipediaDto? = null

@@ -34,7 +34,7 @@ class NobelPrizeRepositoryImpl(
                         birthContinent = laureateDto.birth?.place?.continent?.en,
                         deathDate = laureateDto.death?.date,
                         wikipediaUrl = laureateDto.wikipedia?.english ?:
-                        laureateDto.links?.href
+                        laureateDto.links?.firstOrNull()?.href
                     )
                 } ?: emptyList()
 
@@ -78,7 +78,7 @@ class NobelPrizeRepositoryImpl(
                         birthContinent = laureateDto.birth?.place?.continent?.en,
                         deathDate = laureateDto.death?.date,
                         wikipediaUrl = laureateDto.wikipedia?.english ?:
-                        laureateDto.links?.href,
+                        laureateDto.links?.firstOrNull()?.href,
                         awardYear = prizeDto.awardYear,
                         category = prizeDto.category.en
                     )
